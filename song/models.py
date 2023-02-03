@@ -11,19 +11,19 @@ class Song(models.Model):
         Genre,
         on_delete=models.SET_NULL,
         null=True, blank=True,
-        verbose_name='songs'
+        related_name='songs'
     )
     album = models.ForeignKey(
         Album,
         on_delete=models.SET_NULL,
         null=True, blank=True,
-        verbose_name='songs'
+        related_name='songs'
     )
     artist = models.ForeignKey(
         Artist,
         on_delete=models.SET_NULL,
         null=True, blank=True,
-        verbose_name='songs'
+        related_name='songs'
     )
 
     def __str__(self) -> str:

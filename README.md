@@ -1,6 +1,6 @@
 # Spotify clone app
 
-This app is music app which lets you play your favorites songs right from your pocket (NO)
+This app is a music app which lets you play your favorite songs right from your pocket (NO)
 ## Installation
 
 ```bash
@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ```
 Now create dotenv file (.env) and fill in your database (we use PostgreSQL) name, username and password
 
-After you're done setting up everything, run the make command to run a local server.
+After you're done setting up everything, run a make command to run a local server.
 ```bash
 make run #or
 python manage.py runserver

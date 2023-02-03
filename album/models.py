@@ -5,7 +5,6 @@ from genre.models import Genre
 
 class Album(models.Model):
     title = models.CharField(max_length=255)
-    is_liked = models.BooleanField(default=False)
     artist = models.ForeignKey(
         Artist,
         on_delete=models.SET_NULL,

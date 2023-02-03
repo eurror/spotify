@@ -16,3 +16,6 @@ test:
 
 collect:
 	python manage.py collectstatic
+
+push:
+	git push origin master

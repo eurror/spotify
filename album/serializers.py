@@ -11,8 +11,10 @@ class AlbumSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
-        representation['artist'] = instance.artist.name
-        representation['genre'] = instance.genre.title
+        if instance.artist is not None:
+            representation['artist'] = instance.artist.name
+        if instance.genre is not None:
+            representation['genre'] = instance.genre.title
         representation['songs'] = SongSerializer(
             Song.objects.filter(album=instance.pk), many=True
         ).data

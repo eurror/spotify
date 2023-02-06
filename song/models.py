@@ -10,6 +10,7 @@ class Song(models.Model):
     audio_file = models.FileField(blank=True,null=True)
     audio_link = models.CharField(max_length=200,blank=True,null=True)
     paginate_by = 2
+    image = models.ImageField(blank=True, null=True, upload_to='')
     genre = models.ForeignKey(
         Genre,
         on_delete=models.SET_NULL,
